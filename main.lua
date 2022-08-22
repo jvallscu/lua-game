@@ -1,7 +1,7 @@
 io.stdout:setvbuf("no")
 
 
-
+--Version 0.0 of slime game
 
 function love.load()
   
