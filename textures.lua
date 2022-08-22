@@ -37,18 +37,21 @@ function Texture:load()
   textureMap[math.floor((house.x + 1.5 * frame_width) / frame_width)][math.floor((house.y + 6 * frame_width) / frame_width) + 1] = 162
   
   
-  for i=3,x_tiles - 5,2 do
-    textureMap[i][3] = 209
-    textureMap_offset16[i][6] = 209
-    textureMap[i][4] = 210
-    textureMap_offset16[i][7] = 210
+  toggle = 1
+  for i=0,x_tiles - 14,2 do
+    for j=0,2 do
+      textureMap[2 + i + toggle][2 + 3 * j] = 209
+      textureMap[2 + i + toggle][2 + 3 * j + 1] = 210
+      toggle = toggle * -1
+    end
+    
   end
 end
 
 function Texture:draw()
   
   draw_tilemap(textureMap, 0)
-  draw_tilemap(textureMap_offset16, 16)
+  draw_tilemap(textureMap_offset16, 32)
  
 end
 
