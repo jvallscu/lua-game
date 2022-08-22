@@ -17,10 +17,14 @@ function love.load()
   
   require "Tree"
   
+  require "textures"
+  
   
   ground = Ground(0,0)
   grass = Scene()
-  house = House(300, 240)
+  house = House(1000, 240)
+  
+  texture = Texture()
   
   tree = Tree(500, 336)
   tree1 = Tree(600, 336)
@@ -29,6 +33,7 @@ function love.load()
   
   ground:load()
   grass:load()
+  texture:load()
 end
 
 function love.update(dt)
@@ -48,4 +53,7 @@ function love.draw()
   tree1:draw()
   tree2:draw()
   tree3:draw()
+  
+  texture:draw()
+  
 end
