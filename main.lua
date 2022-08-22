@@ -26,10 +26,6 @@ function love.load()
   
   texture = Texture()
   
-  tree = Tree(500, 336)
-  tree1 = Tree(600, 336)
-  tree2 = Tree(700, 336)
-  tree3 = Tree(800, 336)
   
   ground:load()
   grass:load()
@@ -49,10 +45,7 @@ function love.draw()
   
   house:draw()
   
-  tree:draw()
-  tree1:draw()
-  tree2:draw()
-  tree3:draw()
+  
   
   texture:draw()
   
