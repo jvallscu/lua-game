@@ -19,34 +19,39 @@ function love.load()
   
   require "textures"
   
+  require "player"
+  
   
   ground = Ground(0,0)
   grass = Scene()
-  house = House(1000, 240)
+  house = House(1000, 220)
   
   texture = Texture()
   
+  slime = Player(150, 400)
   
   ground:load()
   grass:load()
   texture:load()
+  slime:load()
 end
 
 function love.update(dt)
 
-
+  slime:update(dt)
+  
 end
 
 function love.draw()
   
+  
   ground:draw()
-  
-  --grass:draw()
-  
-  house:draw()
-  
   
   
   texture:draw()
+  
+  house:draw()
+  slime:draw()
+  
   
 end
